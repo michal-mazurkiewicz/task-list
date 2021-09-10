@@ -5,9 +5,9 @@ export type FormattedTask = {
   description: string;
   budget: CurrencyValue;
   proposalCount: number;
-  platforms: string;
+  platforms: string; 
   timestamp: string;
-};
+}
 
 export enum Platforms {
   INSTAGRAM = "INSTAGRAM",
@@ -31,7 +31,7 @@ export interface TasksResponse {
   tasks: Task[];
   count: number;
 }
-
+ 
 export type Task = {
   id: string;
   addedTime: string;
