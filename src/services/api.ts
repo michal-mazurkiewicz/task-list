@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { computed } from 'vue'
-import { QueryParams } from '@/models/api.model'
 import useAuthStore from '@/store/auth'
 
 
@@ -21,7 +20,8 @@ api.interceptors.response.use(
 
 const getBaseURL = computed(() => api.defaults.baseURL)
 
-const paramsToQueryString = (params?: QueryParams) => {
+//this method should be generic
+const paramsToQueryString = (params?: any) => {
   if (!params) return ''
 
   const queryArray: Array<string> = []
